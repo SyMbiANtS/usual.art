@@ -1,7 +1,7 @@
 
 AC_PREREQ([2.60])
 AC_INIT([sound-theme-mageia.guitar],
-        [3],
+        [4],
         [https://forums.mageia.org/en/viewtopic.php?t=4038])
 
 AC_CONFIG_SRCDIR([index.theme.in])

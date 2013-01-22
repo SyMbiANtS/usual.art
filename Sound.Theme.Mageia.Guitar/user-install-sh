@@ -1,0 +1,14 @@
+#!/bin/sh
+#this will symlink files for user override directory
+useroverr='.local/share/sounds'
+sourdir='/usr/local/share/sounds'
+destdir='__custom'
+themedir='mageia/stereo'
+if [ ! -d $HOME/$useroverr/$destdir ]; then
+	mkdir -p $HOME/$useroverr/$destdir
+fi
+ls -f $sourdir/$themedir/ | while read -r file;
+do
+echo $sourdir/$themedir/$file $HOME/$useroverr/$destdir/$file
+	ln -s $sourdir/$themedir/$file $HOME/$useroverr/$destdir/$file	       
+done	
