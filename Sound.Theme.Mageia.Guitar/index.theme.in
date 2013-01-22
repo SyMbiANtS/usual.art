@@ -1,6 +1,7 @@
 [Sound Theme]
-_Name=Default
+_Name=Mageia.guitar
 Directories=stereo
+Comment="Mageia guitar strings theme"
 
 [stereo]
 OutputProfile=stereo
