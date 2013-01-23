@@ -76,7 +76,8 @@ install-data-hook:
 	-ln -s $(DESTDIR)$(sounddir)/audio-test-signal.ogg $(ussdir)/KDE-Sys-App-Positive.ogg		
 	-ln -s $(DESTDIR)$(sounddir)/phone-outgoing-busy.ogg $(ussdir)/KDE-Sys-File-Open-Foes.ogg				#twink2 
 	-ln -s $(DESTDIR)$(sounddir)/screen-capture.ogg $(ussdir)/KDE-Im-Message-In.ogg			
-	-ln -s $(DESTDIR)$(sounddir)/screen-capture1.ogg $(ussdir)/KDE-Im-Message-Out.ogg			
+	-ln -s $(DESTDIR)$(sounddir)/screen-capture1.ogg $(ussdir)/KDE-Im-Message-Out.ogg
+	-ln -s $(DESTDIR)$(sounddir)/message.ogg $(ussdir)/KDE-Im-New-Mail.ogg
 	-ln -s $(DESTDIR)$(sounddir)/screen-capture.ogg $(ussdir)/KDE-Im-Irc-Event.ogg			
 	-ln -s $(DESTDIR)$(sounddir)/message-new-instant.ogg $(ussdir)/KDE-Im-Nudge.ogg			
 	-ln -s $(DESTDIR)$(sounddir)/phone-outgoing-calling.ogg $(ussdir)/KDE-Im-Phone-Ring.ogg			
