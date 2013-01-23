@@ -1,7 +1,7 @@
 This is the readme file out of sound-theme-freedesktop package
 since that was the only compile-ready script
 i left this for authors
-you can find it @ cgit.freedesktop.org/sound-theme-freedesktop 
+you can find it @ http://cgit.freedesktop.org/sound-theme-freedesktop 
 so i've changed mostly 
 .ogg files and makefile.am on stereo directory
 and in this directory just changed few strings 
