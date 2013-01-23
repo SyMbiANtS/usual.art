@@ -5,7 +5,7 @@ SUBDIRS = 			\
 	po			\
 	$(NULL)
 
-themedir = $(datadir)/sounds/mageia
+themedir = $(datadir)/sounds/mageia.guitar.theme.4
 theme_DATA = index.theme
 
 THEME_IN_FILES = index.theme.in

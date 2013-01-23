@@ -1,7 +1,7 @@
 [Sound Theme]
-_Name=Mageia.guitar
+_Name=Mageia.guitar.theme.4
 Directories=stereo
-Comment="Mageia guitar strings theme"
+Comment="Mageia guitar strings theme 4"
 
 [stereo]
 OutputProfile=stereo

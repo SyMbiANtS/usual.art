@@ -1,6 +1,6 @@
 NULL =
 ussdir = /usr/share/sounds
-sounddir = $(datadir)/sounds/mageia/stereo
+sounddir = $(datadir)/sounds/mageia.guitar.theme.4/stereo
 
 sound_DATA =                            \
 	alarm-clock-elapsed.ogg	        \
@@ -91,7 +91,8 @@ install-data-hook:
 	-ln -s $(DESTDIR)$(sounddir)/device-removed.ogg $(ussdir)/KDE-K3B-Finish-Error.ogg			
 	-ln -s $(DESTDIR)$(sounddir)/device-added.ogg $(ussdir)/KDE-K3B-Finish-Success.ogg			
 	-ln -s $(DESTDIR)$(sounddir)/complete.ogg $(ussdir)/KDE-K3B-Insert-Medium.ogg			
-	-ln -s $(DESTDIR)$(sounddir)/addon-2.ogg $(ussdir)/KDE-Window-Close.ogg				
+	-ln -s $(DESTDIR)$(sounddir)/addon-2.ogg $(ussdir)/KDE-Window-Close.ogg	
+	-ln -s $(DESTDIR)$(sounddir) $(ussdir)/mageia.guitar.theme.4
 #	-rm -f $(DESTDIR)$(sounddir)/power-plug.ogg
 #	$(LN_S) device-added.ogg $(DESTDIR)$(sounddir)/power-plug.ogg
 #	-rm -f $(DESTDIR)$(sounddir)/power-unplug.ogg

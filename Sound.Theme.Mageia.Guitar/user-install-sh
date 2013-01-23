@@ -3,7 +3,7 @@
 useroverr='.local/share/sounds'
 sourdir='/usr/local/share/sounds'
 destdir='__custom'
-themedir='mageia/stereo'
+themedir='mageia.guitar.theme.4/stereo'
 if [ ! -d $HOME/$useroverr/$destdir ]; then
 	mkdir -p $HOME/$useroverr/$destdir
 fi
