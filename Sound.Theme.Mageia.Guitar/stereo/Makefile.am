@@ -55,10 +55,10 @@ install-data-hook:
 	-cp -ifH $(ussdir)/KDE*.ogg $(datadir)/sounds/kde.previous
 	-rm	-f $(ussdir)/KDE*.ogg
 	-fi
-	-ln -s $(DESTDIR)$(sounddir)/desktop-login.ogg $(ussdir)/KDE-Sys-Log-In-Long.ogg			
-	-ln -s $(DESTDIR)$(sounddir)/desktop-logout.ogg $(ussdir)/KDE-Sys-Log-Out-Long.ogg			
+	-ln -s $(DESTDIR)$(sounddir)/desktop-login.ogg $(ussdir)/KDE-Sys-Log-In.ogg			
+	-ln -s $(DESTDIR)$(sounddir)/desktop-logout.ogg $(ussdir)/KDE-Sys-Log-In-Long.ogg			
 	-ln -s $(DESTDIR)$(sounddir)/service-login.ogg $(ussdir)/KDE-Sys-Log-In-Short.ogg			
-	-ln -s $(DESTDIR)$(sounddir)/service-logout.ogg $(ussdir)/KDE-Sys-Log-Out-Short.ogg			
+	-ln -s $(DESTDIR)$(sounddir)/service-logout.ogg $(ussdir)/KDE-Sys-Log-Out.ogg			
 	-ln -s $(DESTDIR)$(sounddir)/window-question.ogg $(ussdir)/KDE-Sys-Question.ogg			
 	-ln -s $(DESTDIR)$(sounddir)/window-attention.ogg $(ussdir)/KDE-Sys-Warning.ogg			
 	-ln -s $(DESTDIR)$(sounddir)/trash-empty.ogg $(ussdir)/KDE-Sys-Trash-Emptied.ogg			
