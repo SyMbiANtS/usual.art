@@ -1,7 +1,7 @@
 NULL =
 ussdir = /usr/share/sounds
-sounddir = $(datadir)/sounds/mageia.guitar.theme.4/stereo
-
+themefoldername = mageia.guitar.theme.4
+sounddir = $(datadir)/sounds/$(themefoldername)/stereo
 sound_DATA =                            \
 	alarm-clock-elapsed.ogg	        \
 	audio-channel-front-center.ogg	\
@@ -55,10 +55,10 @@ install-data-hook:
 	-cp -ifH $(ussdir)/KDE*.ogg $(datadir)/sounds/kde.previous
 	-rm	-f $(ussdir)/KDE*.ogg
 	-fi
-	-ln -s $(DESTDIR)$(sounddir)/desktop-login.ogg $(ussdir)/KDE-Sys-Log-In.ogg			
-	-ln -s $(DESTDIR)$(sounddir)/desktop-logout.ogg $(ussdir)/KDE-Sys-Log-In-Long.ogg			
-	-ln -s $(DESTDIR)$(sounddir)/service-login.ogg $(ussdir)/KDE-Sys-Log-In-Short.ogg			
-	-ln -s $(DESTDIR)$(sounddir)/service-logout.ogg $(ussdir)/KDE-Sys-Log-Out.ogg			
+	-ln -s $(DESTDIR)$(sounddir)/service-login.ogg $(ussdir)/KDE-Sys-Log-In.ogg			
+	-ln -s $(DESTDIR)$(sounddir)/service-logout.ogg $(ussdir)/KDE-Sys-Log-In-Long.ogg			
+	-ln -s $(DESTDIR)$(sounddir)/desktop-login.ogg $(ussdir)/KDE-Sys-Log-In-Short.ogg			
+	-ln -s $(DESTDIR)$(sounddir)/desktop-logout.ogg $(ussdir)/KDE-Sys-Log-Out.ogg			
 	-ln -s $(DESTDIR)$(sounddir)/window-question.ogg $(ussdir)/KDE-Sys-Question.ogg			
 	-ln -s $(DESTDIR)$(sounddir)/window-attention.ogg $(ussdir)/KDE-Sys-Warning.ogg			
 	-ln -s $(DESTDIR)$(sounddir)/trash-empty.ogg $(ussdir)/KDE-Sys-Trash-Emptied.ogg			
@@ -92,7 +92,11 @@ install-data-hook:
 	-ln -s $(DESTDIR)$(sounddir)/device-added.ogg $(ussdir)/KDE-K3B-Finish-Success.ogg			
 	-ln -s $(DESTDIR)$(sounddir)/complete.ogg $(ussdir)/KDE-K3B-Insert-Medium.ogg			
 	-ln -s $(DESTDIR)$(sounddir)/addon-2.ogg $(ussdir)/KDE-Window-Close.ogg	
-	-ln -s $(DESTDIR)$(sounddir) $(ussdir)/mageia.guitar.theme.4
+	-ln -s $(DESTDIR)/sounds/$(themefoldername) $(ussdir)/$(themefoldername)
+	-if test -d $(ussdir)/freedesktop; then
+	-mv $(ussdir)/freedesktop $(ussdir)/freedesktop.theme
+	-ln -s  $(DESTDIR)/sounds/$(themefoldername) $(ussdir)/freedesktop
+	-fi 
 #	-rm -f $(DESTDIR)$(sounddir)/power-plug.ogg
 #	$(LN_S) device-added.ogg $(DESTDIR)$(sounddir)/power-plug.ogg
 #	-rm -f $(DESTDIR)$(sounddir)/power-unplug.ogg
