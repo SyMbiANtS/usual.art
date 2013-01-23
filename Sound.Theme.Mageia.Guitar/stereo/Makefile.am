@@ -49,13 +49,16 @@ sound_DATA =                            \
 	$(NULL)
 
 KDE_LINKS = \
-	@if [ -f $(ussdir)/KDE-Sys-Log-In-Long.ogg" || -h $(ussdir)/KDE-Sys-Log-In-Long.ogg" || -e $(ussdir)/KDE-Sys-Log-In-Long.ogg"] || -e $(ussdir)/KDE-Sys-Log-Out.ogg"]; \
-	then echo "SymLinking files For KDE theme"; \
-	mkdir $(datadir)/sounds/kde.previous ; \
+	@if [ -f "$(ussdir)/KDE-Sys-Log-In-Long.ogg" ]||[ -e "$(ussdir)/KDE-Sys-Log-In-Long.ogg" ]; \
+	then echo "Found KDE files"; \
+	if [ ! -d "$(datadir)/sounds/kde.previous" ] ; \
+	then mkdir $(datadir)/sounds/kde.previous ; \
 	cp -ifH $(ussdir)/KDE*.ogg $(datadir)/sounds/kde.previous ; \
+	fi ; \
 	rm -f $(ussdir)/KDE*.ogg ; \
 	ln -sb $(datadir)/sounds/kde.previous $(ussdir)/kde.old ; \
 	fi ;\
+	echo "Symlinking files for KDE theme" ; \
 	ln -s $(DESTDIR)$(sounddir)/service-login.ogg $(ussdir)/KDE-Sys-Log-In.ogg;			\
 	ln -s $(DESTDIR)$(sounddir)/service-logout.ogg $(ussdir)/KDE-Sys-Log-In-Long.ogg;			\
 	ln -s $(DESTDIR)$(sounddir)/desktop-login.ogg $(ussdir)/KDE-Sys-Log-In-Short.ogg;			\
