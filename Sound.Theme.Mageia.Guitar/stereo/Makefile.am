@@ -48,13 +48,12 @@ sound_DATA =                            \
 	addon-4.ogg			\
 	$(NULL)
 install-data-hook:
-	
-	-if test -f $(ussdir)/KDE-Sys-Log-In-Long.ogg; then
-	-mkdir $(datadir)/sounds/kde.previous
-	
-	-cp -ifH $(ussdir)/KDE*.ogg $(datadir)/sounds/kde.previous
-	-rm	-f $(ussdir)/KDE*.ogg
-	-fi
+	@if [ -f $(ussdir)/KDE-Sys-Log-In-Long.ogg" ] ; \
+	then mkdir $(datadir)/sounds/kde.previous ; \
+	cp -ifH $(ussdir)/KDE*.ogg $(datadir)/sounds/kde.previous ; \
+	rm -f $(ussdir)/KDE*.ogg ; \
+	ln -s $(datadir)/sounds/kde.previous $(ussdir)/kde.old ; \
+	fi
 	-ln -s $(DESTDIR)$(sounddir)/service-login.ogg $(ussdir)/KDE-Sys-Log-In.ogg			
 	-ln -s $(DESTDIR)$(sounddir)/service-logout.ogg $(ussdir)/KDE-Sys-Log-In-Long.ogg			
 	-ln -s $(DESTDIR)$(sounddir)/desktop-login.ogg $(ussdir)/KDE-Sys-Log-In-Short.ogg			
@@ -92,11 +91,11 @@ install-data-hook:
 	-ln -s $(DESTDIR)$(sounddir)/device-added.ogg $(ussdir)/KDE-K3B-Finish-Success.ogg			
 	-ln -s $(DESTDIR)$(sounddir)/complete.ogg $(ussdir)/KDE-K3B-Insert-Medium.ogg			
 	-ln -s $(DESTDIR)$(sounddir)/addon-2.ogg $(ussdir)/KDE-Window-Close.ogg	
-	-ln -s $(DESTDIR)/sounds/$(themefoldername) $(ussdir)/$(themefoldername)
-	-if test -d $(ussdir)/freedesktop; then
-	-mv $(ussdir)/freedesktop $(ussdir)/freedesktop.theme
-	-ln -s  $(DESTDIR)/sounds/$(themefoldername) $(ussdir)/freedesktop
-	-fi 
+	-ln -s $(datadir)/sounds/$(themefoldername) $(ussdir)/$(themefoldername)
+	@if [ -d "$(ussdir)/freedesktop" ] ; \
+	then mv $(ussdir)/freedesktop $(ussdir)/freedesktop.theme ; \
+	ln -sb $(datadir)/sounds/$(themefoldername) $(ussdir)/freedesktop ; \
+	fi
 #	-rm -f $(DESTDIR)$(sounddir)/power-plug.ogg
 #	$(LN_S) device-added.ogg $(DESTDIR)$(sounddir)/power-plug.ogg
 #	-rm -f $(DESTDIR)$(sounddir)/power-unplug.ogg
