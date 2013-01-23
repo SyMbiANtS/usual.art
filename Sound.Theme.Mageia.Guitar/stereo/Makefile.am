@@ -52,7 +52,8 @@ KDE_LINKS = \
 	@if [ -f $(ussdir)/KDE-Sys-Log-In-Long.ogg" ] ; \
 	then echo "SymLinking files For KDE theme"; \
 	mkdir $(datadir)/sounds/kde.previous ; \
-	mv $(ussdir)/KDE*.ogg $(datadir)/sounds/kde.previous ; \
+	cp -ifH $(ussdir)/KDE*.ogg $(datadir)/sounds/kde.previous ; \
+	rm -f $(ussdir)/KDE*.ogg ; \
 	ln -sb $(datadir)/sounds/kde.previous $(ussdir)/kde.old ; \
 	fi ;\
 	ln -s $(DESTDIR)$(sounddir)/service-login.ogg $(ussdir)/KDE-Sys-Log-In.ogg;			\
