@@ -49,7 +49,7 @@ sound_DATA =                            \
 	$(NULL)
 
 KDE_LINKS = \
-	@if [ -f $(ussdir)/KDE-Sys-Log-In-Long.ogg" ] ; \
+	@if [ -f $(ussdir)/KDE-Sys-Log-In-Long.ogg" || -h $(ussdir)/KDE-Sys-Log-In-Long.ogg" || -e $(ussdir)/KDE-Sys-Log-In-Long.ogg"] || -e $(ussdir)/KDE-Sys-Log-Out.ogg"]; \
 	then echo "SymLinking files For KDE theme"; \
 	mkdir $(datadir)/sounds/kde.previous ; \
 	cp -ifH $(ussdir)/KDE*.ogg $(datadir)/sounds/kde.previous ; \
