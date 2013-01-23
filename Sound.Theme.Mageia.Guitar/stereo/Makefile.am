@@ -63,10 +63,10 @@ install-data-hook:
 	-ln -s $(DESTDIR)$(sounddir)/window-attention.ogg $(ussdir)/KDE-Sys-Warning.ogg			
 	-ln -s $(DESTDIR)$(sounddir)/trash-empty.ogg $(ussdir)/KDE-Sys-Trash-Emptied.ogg			
 	-ln -s $(DESTDIR)$(sounddir)/bell.ogg $(ussdir)/KDE-Sys-Special.ogg					
-	-ln -s $(DESTDIR)$(sounddir)/network-connectivity-established.ogg $(ussdir)/KDE-Sys-User-Auth.ogg	
+	-ln -s $(DESTDIR)$(sounddir)/network-connectivity-established.ogg $(ussdir)/KDE-Im-User-Auth.ogg	
 	-ln -s $(DESTDIR)$(sounddir)/network-connectivity-lost.ogg $(ussdir)/KDE-Im-Connection-Lost.ogg	
-	-ln -s $(DESTDIR)$(sounddir)/power-plug.ogg $(ussdir)/KDE-Sys-Im-Contact-In.ogg			
-	-ln -s $(DESTDIR)$(sounddir)/power-unplug.ogg $(ussdir)/KDE-Contact-Out.ogg				
+	-ln -s $(DESTDIR)$(sounddir)/power-plug.ogg $(ussdir)/KDE-Im-Contact-In.ogg			
+	-ln -s $(DESTDIR)$(sounddir)/power-unplug.ogg $(ussdir)/KDE-Im-Contact-Out.ogg				
 	-ln -s $(DESTDIR)$(sounddir)/suspend-error.ogg $(ussdir)/KDE-Sys-App-Error-Critical.ogg		
 	-ln -s $(DESTDIR)$(sounddir)/dialog-warning.ogg $(ussdir)/KDE-Sys-App-Error-Serious-Very.ogg		#twink1	
 	-ln -s $(DESTDIR)$(sounddir)/dialog-error.ogg $(ussdir)/KDE-Sys-App-Error.ogg			
