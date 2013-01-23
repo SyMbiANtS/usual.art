@@ -74,16 +74,16 @@ install-data-hook:
 	-ln -s $(DESTDIR)$(sounddir)/addon-1.ogg $(ussdir)/KDE-Sys-App-Message.ogg				
 	-ln -s $(DESTDIR)$(sounddir)/addon-3.ogg $(ussdir)/KDE-Sys-App-Negative.ogg				
 	-ln -s $(DESTDIR)$(sounddir)/audio-test-signal.ogg $(ussdir)/KDE-Sys-App-Positive.ogg		
-	-ln -s $(DESTDIR)$(sounddir)/phone-outgoing-busy.ogg $(ussdir)/KDE-Sys-File-Open-Foes.ogg				#twink2 
-	-ln -s $(DESTDIR)$(sounddir)/screen-capture.ogg $(ussdir)/KDE-Im-Message-In.ogg			
+	-ln -s $(DESTDIR)$(sounddir)/phone-outgoing-busy.ogg $(ussdir)/KDE-Sys-File-Open-Foes.ogg			#twink2 
+	-ln -s $(DESTDIR)$(sounddir)/screen-capture.ogg $(ussdir)/KDE-Im-Message-In.ogg						#twink3
 	-ln -s $(DESTDIR)$(sounddir)/screen-capture1.ogg $(ussdir)/KDE-Im-Message-Out.ogg
-	-ln -s $(DESTDIR)$(sounddir)/message.ogg $(ussdir)/KDE-Im-New-Mail.ogg
-	-ln -s $(DESTDIR)$(sounddir)/screen-capture.ogg $(ussdir)/KDE-Im-Irc-Event.ogg			
+	-ln -s $(DESTDIR)$(sounddir)/message.ogg $(ussdir)/KDE-Im-New-Mail.ogg				#twink4
+	-ln -s $(DESTDIR)$(sounddir)/screen-capture.ogg $(ussdir)/KDE-Im-Irc-Event.ogg						#twink3
 	-ln -s $(DESTDIR)$(sounddir)/message-new-instant.ogg $(ussdir)/KDE-Im-Nudge.ogg			
 	-ln -s $(DESTDIR)$(sounddir)/phone-outgoing-calling.ogg $(ussdir)/KDE-Im-Phone-Ring.ogg			
-	-ln -s $(DESTDIR)$(sounddir)/message.ogg $(ussdir)/KDE-Im-Sms.ogg					
+	-ln -s $(DESTDIR)$(sounddir)/message.ogg $(ussdir)/KDE-Im-Sms.ogg				#twink4
 	-ln -s $(DESTDIR)$(sounddir)/system-ready.ogg $(ussdir)/KDE-Im-Network-Problems.ogg			
-	-ln -s $(DESTDIR)$(sounddir)/dialog-warning.ogg $(ussdir)/KDE-Im-Cant-Connect.ogg				#twink 1
+	-ln -s $(DESTDIR)$(sounddir)/dialog-warning.ogg $(ussdir)/KDE-Im-Cant-Connect.ogg			#twink 1
 	-ln -s $(DESTDIR)$(sounddir)/phone-outgoing-busy.ogg $(ussdir)/KDE-Im-Error-On-Connection.ogg			#twink 2
 	-ln -s $(DESTDIR)$(sounddir)/camera-shutter.ogg $(ussdir)/KDE-Im-Low-Priority-Message.ogg		
 	-ln -s $(DESTDIR)$(sounddir)/audio-volume-change.ogg $(ussdir)/KDE-Im-Highlight-Msg.ogg		
@@ -91,7 +91,6 @@ install-data-hook:
 	-ln -s $(DESTDIR)$(sounddir)/device-removed.ogg $(ussdir)/KDE-K3B-Finish-Error.ogg			
 	-ln -s $(DESTDIR)$(sounddir)/device-added.ogg $(ussdir)/KDE-K3B-Finish-Success.ogg			
 	-ln -s $(DESTDIR)$(sounddir)/complete.ogg $(ussdir)/KDE-K3B-Insert-Medium.ogg			
-	-ln -s $(DESTDIR)$(sounddir)/addon-2.ogg $(ussdir)/KDE-Window-Close.ogg				
 	-ln -s $(DESTDIR)$(sounddir)/addon-2.ogg $(ussdir)/KDE-Window-Close.ogg				
 #	-rm -f $(DESTDIR)$(sounddir)/power-plug.ogg
 #	$(LN_S) device-added.ogg $(DESTDIR)$(sounddir)/power-plug.ogg
