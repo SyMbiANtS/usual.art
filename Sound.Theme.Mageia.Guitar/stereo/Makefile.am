@@ -79,7 +79,7 @@ install-data-hook:
 	-ln -s $(DESTDIR)$(sounddir)/screen-capture1.ogg $(ussdir)/KDE-Im-Message-Out.ogg			
 	-ln -s $(DESTDIR)$(sounddir)/screen-capture.ogg $(ussdir)/KDE-Im-Irc-Event.ogg			
 	-ln -s $(DESTDIR)$(sounddir)/message-new-instant.ogg $(ussdir)/KDE-Im-Nudge.ogg			
-	-ln -s $(DESTDIR)$(sounddir)/phone-outgoing-calling.ogg $(ussdir)/KDE-Phone-Ring.ogg			
+	-ln -s $(DESTDIR)$(sounddir)/phone-outgoing-calling.ogg $(ussdir)/KDE-Im-Phone-Ring.ogg			
 	-ln -s $(DESTDIR)$(sounddir)/message.ogg $(ussdir)/KDE-Im-Sms.ogg					
 	-ln -s $(DESTDIR)$(sounddir)/system-ready.ogg $(ussdir)/KDE-Im-Network-Problems.ogg			
 	-ln -s $(DESTDIR)$(sounddir)/dialog-warning.ogg $(ussdir)/KDE-Im-Cant-Connect.ogg				#twink 1
