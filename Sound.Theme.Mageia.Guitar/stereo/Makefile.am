@@ -97,11 +97,13 @@ KDE_LINKS = \
 	ln -s $(DESTDIR)$(sounddir)/complete.ogg $(ussdir)/KDE-K3B-Insert-Medium.ogg;			\
 	ln -s $(DESTDIR)$(sounddir)/addon-2.ogg $(ussdir)/KDE-Window-Close.ogg;	\
 $(NULL)
-	
 FREED_LINKS = \
 	@if [ -d "$(ussdir)/freedesktop" ] ; \
 	echo "SymLinking files For Freedesktop theme"; \
+	if [ ! -d  "$(ussdir)/freedesktop.theme" ] ; \
 	then mv $(ussdir)/freedesktop $(ussdir)/freedesktop.theme ; \
+	else rm -ifH $(ussdir)/freedesktop ; \
+	fi ; \
 	ln -sb $(datadir)/sounds/$(themefoldername) $(ussdir)/freedesktop ; \
 	fi ; \
 $(NULL)
