@@ -54,9 +54,9 @@ KDE_LINKS = \
 		if [ ! -d "$(datadir)/sounds/kde.previous" ] ; \
 		    then mkdir $(datadir)/sounds/kde.previous ; \
 		    cp -ifH $(ussdir)/KDE*.ogg $(datadir)/sounds/kde.previous ; \
+		    ln -sb $(datadir)/sounds/kde.previous $(ussdir)/kde.old ; \
 		fi ; \
 	    rm -f $(ussdir)/KDE*.ogg ; \
-	    ln -sb $(datadir)/sounds/kde.previous $(ussdir)/kde.old ; \
 	fi ;\
 	echo "Symlinking files for KDE theme" ; \
 	ln -s $(DESTDIR)$(sounddir)/service-login.ogg $(ussdir)/KDE-Sys-Log-In.ogg;			\
