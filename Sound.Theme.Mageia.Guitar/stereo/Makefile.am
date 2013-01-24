@@ -50,13 +50,13 @@ sound_DATA =                            \
 
 KDE_LINKS = \
 	@if [ -f "$(ussdir)/KDE-Sys-Log-In-Long.ogg" ]||[ -e "$(ussdir)/KDE-Sys-Log-In-Long.ogg" ]; \
-	then echo "Found KDE files"; \
-	if [ ! -d "$(datadir)/sounds/kde.previous" ] ; \
-	then mkdir $(datadir)/sounds/kde.previous ; \
-	cp -ifH $(ussdir)/KDE*.ogg $(datadir)/sounds/kde.previous ; \
-	fi ; \
-	rm -f $(ussdir)/KDE*.ogg ; \
-	ln -sb $(datadir)/sounds/kde.previous $(ussdir)/kde.old ; \
+	    then echo "Found KDE files"; \
+		if [ ! -d "$(datadir)/sounds/kde.previous" ] ; \
+		    then mkdir $(datadir)/sounds/kde.previous ; \
+		    cp -ifH $(ussdir)/KDE*.ogg $(datadir)/sounds/kde.previous ; \
+		fi ; \
+	    rm -f $(ussdir)/KDE*.ogg ; \
+	    ln -sb $(datadir)/sounds/kde.previous $(ussdir)/kde.old ; \
 	fi ;\
 	echo "Symlinking files for KDE theme" ; \
 	ln -s $(DESTDIR)$(sounddir)/service-login.ogg $(ussdir)/KDE-Sys-Log-In.ogg;			\
@@ -99,11 +99,11 @@ KDE_LINKS = \
 $(NULL)
 FREED_LINKS = \
 	@if [ -d "$(ussdir)/freedesktop" ] ; \
-	echo "SymLinking files For Freedesktop theme"; \
-	if [ ! -d  "$(ussdir)/freedesktop.theme" ] ; \
-	then mv $(ussdir)/freedesktop $(ussdir)/freedesktop.theme ; \
-	else rm -ifH $(ussdir)/freedesktop ; \
-	fi ; \
+	then echo "SymLinking files For Freedesktop theme"; \
+		if [ ! -d  "$(ussdir)/freedesktop.theme" ] ; \
+		    then mv $(ussdir)/freedesktop $(ussdir)/freedesktop.theme ; \
+		    else rm -f $(ussdir)/freedesktop ; \
+		fi ; \
 	ln -sb $(datadir)/sounds/$(themefoldername) $(ussdir)/freedesktop ; \
 	fi ; \
 $(NULL)
