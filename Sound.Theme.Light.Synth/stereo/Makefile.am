@@ -29,6 +29,7 @@ sound_DATA =                            \
 	network-connectivity-established.ogg	\
 	network-connectivity-lost.ogg		\
 	phone-incoming-call.ogg		\
+	phone-incoming-call-short.ogg\
 	phone-outgoing-busy.ogg		\
 	phone-outgoing-calling.ogg      \
 	power-plug.ogg			\
