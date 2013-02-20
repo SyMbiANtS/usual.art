@@ -1,7 +1,0 @@
-[Sound Theme]
-_Name=mageia.light.synth.1
-Directories=stereo
-Comment=mageia.light.synth.1
-
-[stereo]
-OutputProfile=stereo
