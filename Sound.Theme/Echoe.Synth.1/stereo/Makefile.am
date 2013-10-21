@@ -53,12 +53,11 @@ KDE_LINKS = \
 	@if [ -f "$(ussdir)/KDE-Sys-Log-In-Long.ogg" ]||[ -e "$(ussdir)/KDE-Sys-Log-In-Long.ogg" ]; \
 	    then echo "Found KDE files"; \
 		if [ ! -d "$(datadir)/sounds/kde.previous" ] ; \
-		    then mkdir $(datadir)/sounds/kde.previous ; \
-		    cp -ifH $(ussdir)/KDE*.ogg $(datadir)/sounds/kde.previous ; \
-		    ln -sb $(datadir)/sounds/kde.previous $(ussdir)/kde.old ; \
+		    then mkdir $(datadir)/sounds/kde.previous ; \	
+			cp -ifH $(ussdir)/KDE*.ogg $(datadir)/sounds/kde.previous ; \
+			ln -sb $(datadir)/sounds/kde.previous $(ussdir)/kde.old ; \	    
 		fi ; \
-	    rm -f $(ussdir)/KDE*.ogg ; \
-	fi ;\
+	rm -f $(ussdir)/KDE*.ogg ; \
 	echo "Symlinking files for KDE theme" ; \
 	ln -s $(DESTDIR)$(sounddir)/service-login.ogg $(ussdir)/KDE-Sys-Log-In.ogg;			\
 	ln -s $(DESTDIR)$(sounddir)/service-logout.ogg $(ussdir)/KDE-Sys-Log-In-Long.ogg;			\
@@ -97,6 +96,7 @@ KDE_LINKS = \
 	ln -s $(DESTDIR)$(sounddir)/device-added.ogg $(ussdir)/KDE-K3B-Finish-Success.ogg;			\
 	ln -s $(DESTDIR)$(sounddir)/complete.ogg $(ussdir)/KDE-K3B-Insert-Medium.ogg;			\
 	ln -s $(DESTDIR)$(sounddir)/addon-2.ogg $(ussdir)/KDE-Window-Close.ogg;	\
+	fi ;\
 $(NULL)
 FREED_LINKS = \
 	@if [ -d "$(ussdir)/freedesktop" ] ; \
