@@ -1,6 +1,8 @@
 usual.art
 =========
 
+there's a link for rpm below
+
 to unpack it run tar -xzvf theme*.tar.bz2
 
 run the autogen.sh script
@@ -34,3 +36,11 @@ aloha to mageia atelier artworx team! now debugging rosa linux.
 
 i've decided to split installation and sounds, so themes will be available through bz2, gz ,xz files, while first old themes will be in the sound.theme folder
 also install_scripts folder is for all those makefile changes, because i found an issue with converting those to rpm, i'm working on it.
+
+so i've built a noarch rpm that can be obtained here
+http://abf-downloads.rosalinux.ru/symbiants_personal/repository/rosa2012.1/x86_64/main/release/
+
+and spec file for rpm is in
+https://abf.rosalinux.ru/symbiants
+
+makefiles for rpms in install_scripts

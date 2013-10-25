@@ -1,7 +1,7 @@
 [Sound Theme]
-_Name=mageia.echoe.synth-1
+_Name=_theme_name_
 Directories=stereo
-Comment=mageia.echoe.synth-1
+Comment=symbiants _theme_name_
 
 [stereo]
 OutputProfile=stereo

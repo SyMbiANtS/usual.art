@@ -39,8 +39,8 @@ subdir = po
 install_sh = @install_sh@
 # Automake >= 1.8 provides @mkdir_p@.
 # Until it can be supposed, use the safe fallback:
-mkdir_p = $(install_sh) -d
-
+#mkdir_p = $(install_sh) -d
+mkdir_p=@mkdir_p@
 INSTALL = @INSTALL@
 INSTALL_DATA = @INSTALL_DATA@
 
@@ -163,7 +163,7 @@ maintainer-clean: distclean
 	@echo "it deletes files that may require special tools to rebuild."
 	rm -f Makefile.in.in
 
-distdir = ../$(PACKAGE)-$(VERSION)/$(subdir)
+distdir = $(DESTDIR)/$(PACKAGE)-$(VERSION)/
 dist distdir: $(DISTFILES)
 	dists="$(DISTFILES)"; \
 	extra_dists="$(EXTRA_DISTFILES)"; \

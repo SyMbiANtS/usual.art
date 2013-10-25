@@ -1,9 +1,9 @@
 #!/bin/sh
 #this will symlink files for user override directory
 useroverr='.local/share/sounds'
-sourdir='/usr/local/share/sounds'
+sourdir='/usr/share/sounds'
 destdir='__custom'
-themedir='mageia.guitar.theme.4/stereo'
+themedir='sound-theme-echoe.synth-1/stereo'
 if [ ! -d $HOME/$useroverr/$destdir ]; then
 	mkdir -p $HOME/$useroverr/$destdir
 fi

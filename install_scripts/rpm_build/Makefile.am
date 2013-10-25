@@ -5,14 +5,14 @@ SUBDIRS = 			\
 	po			\
 	$(NULL)
 
-themedir = $(datadir)/sounds/$(THEME_NAME)
-#theme_DATA = index.theme
+themedir = $(DESTDIR)
+theme_DATA = index.theme
 
-#THEME_IN_FILES = index.theme.in
+THEME_IN_FILES = index.theme.in
 
-wildcard = %.theme: %.theme.in
-	$(INTLTOOL_MERGE) $(wildcard) $(top_srcdir)/po/*.po) ; \
-	$(INTLTOOL_MERGE) $(top_srcdir)/po $< $@ -d -u -c $(top_builddir)/po/.intltool-merge-cache
+%.theme: %.theme.in $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*.po) ; \
+$(INTLTOOL_MERGE) -d -u -c $(top_builddir)/po/.intltool-merge-cache  $(top_srcdir)/po $< $@ ; \
+sed -i 's/_theme_name_/$(GETTEXT_PACKAGE)/' index.theme ;
 
 EXTRA_DIST = \
 	README			\
