@@ -47,3 +47,5 @@ you will need to run user-install-sh under that specific user account - so just 
 into home/desktop folder and run it from terminal-like program
 have fun then ; )
 
+to produce it i was using open source programs ardour2 (to record), qtractor (to work with recorded sounds), lmms (synths) with some LADSPA plugins and audacity
+for a record period i was using debian + alsa.25 + jack, then switched to mageia and now using rosa, that's why i've made rpm packages.
