@@ -1,7 +1,0 @@
-[Sound Theme]
-_Name=mageia.echoe.synth-1
-Directories=stereo
-Comment=mageia.echoe.synth-1
-
-[stereo]
-OutputProfile=stereo

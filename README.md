@@ -23,8 +23,8 @@ so i've built a noarch rpm that can be obtained here
 
 and spec file for rpm is in
 
-* https://abf.rosalinux.ru/symbiants
-
+* https://abf.io/symbiants
+* https://abf.io/platforms/symbiants_personal/repositories/main
 
 
 makefiles for rpms in install_scripts
